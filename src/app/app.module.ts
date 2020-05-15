@@ -1,8 +1,10 @@
+import { AppRoutes } from './app.routes';
 import { ManageComponent } from './components/manage/manage.component';
 import { StocksService } from './services/stocks.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SummaryComponent } from './components/summary/summary.component';
@@ -17,7 +19,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AppRoutes
   ],
   providers: [StocksService],
   bootstrap: [AppComponent]
